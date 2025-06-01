@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px #9ca3af, 0 0 25px #9ca3af;
+  }
+  50% {
+    box-shadow: 0 0 20px #d1d5db, 0 0 35px #d1d5db;
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+/* Neon Background for Modern Techy Dark Theme */
+.neon-background {
+  background:
+    radial-gradient(circle at center, #2a2a72 0%, #0a0f28 70%),
+    repeating-linear-gradient(45deg, #0a0f28 0, #0a0f28 10px, #0ff 10px, #0ff 11px, #0a0f28 11px, #0a0f28 20px),
+    repeating-linear-gradient(-45deg, #0a0f28 0, #0a0f28 10px, #8ff 10px, #8ff 11px, #0a0f28 11px, #0a0f28 20px);
+  animation: neonGlow 6s ease-in-out infinite alternate;
+  opacity: 0.15;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -10;
+}
+
+@keyframes neonGlow {
+  0% {
+    opacity: 0.1;
+    filter: drop-shadow(0 0 6px #0ff) drop-shadow(0 0 8px #0ff);
+  }
+  100% {
+    opacity: 0.25;
+    filter: drop-shadow(0 0 15px #8ff) drop-shadow(0 0 20px #8ff);
+  }
+}
