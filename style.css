@@ -3,15 +3,15 @@ html {
 }
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 12px #9ca3af, 0 0 25px #9ca3af;
+    box-shadow: 0 0 12px rgba(75, 85, 99, 0.6), 0 0 25px rgba(55, 65, 81, 0.4);
   }
   50% {
-    box-shadow: 0 0 20px #d1d5db, 0 0 35px #d1d5db;
+    box-shadow: 0 0 20px rgba(31, 41, 55, 0.7), 0 0 35px rgba(17, 24, 39, 0.6);
   }
 }
 
 .pulse-glow {
-  animation: pulseGlow 2.5s ease-in-out infinite;
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 /* Neon Background for Modern Techy Dark Theme */
 .neon-background {
