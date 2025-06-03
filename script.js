@@ -53,3 +53,21 @@ AOS.init({
     duration: 1000, // animation duration in ms
     once: true      // animate only once when scrolled into view
 });
+
+function toggleProjects(){
+    const hiddenCards = document.querySelectorAll('#projectsContainer > .hidden');
+    const btn = document.getElementById("seeMoreBtn");
+    if(btn.innerText === "See More Projects"){
+        hiddenCards.forEach(card => card.classList.remove("hidden"));
+        btn.innerText="See Less Projects"
+    }else{
+        const allcards = document.querySelectorAll('#projectsContainer > div');
+        allcards.forEach((card, index) => {
+            if(index >=3 ){
+                card.classList.add('hidden');
+            }
+        })
+        btn.innerText = "See More Projects"
+    }
+    
+}

@@ -6,7 +6,10 @@
     <title>Suhani Mathur-Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
 
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
@@ -97,9 +100,10 @@
     </header>
     <section
       id="home"
-      class="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-20 bg-grey-900 text-white relative"
-      data-aos="fade-up" data-aos-delay="200"  
-      >
+      class="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-20 bg-gray-900 text-white relative"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
       <div class="text-center">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-md">
           <span id="typed-title"></span>
@@ -154,14 +158,18 @@
       <div
         class="rounded-full hover:rounded-xl w-72 h-72 overflow-hidden shadow-xl border-4 border-gray-700 ring-4 ring-gray-800 pulse-glow transition duration-500 ease-in-out"
         data-aos="fade-up"
-        >
+      >
         <img
           src="WhatsApp Image 2025-05-24 at 15.31.51_868fd847.jpg"
           alt="Suhani Mathur"
           class="w-full h-full object-cover"
         />
       </div>
-      <div class="max-w-xl text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
+      <div
+        class="max-w-xl text-center md:text-left"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <h2 class="text-4xl font-extrabold mb-6 text-gray-900">About Me</h2>
         <p class="text-lg leading-relaxed text-gray-800 space-y-4">
           <span>
@@ -187,6 +195,242 @@
           </span>
         </p>
       </div>
+    </section>
+    <section
+      id="projects"
+      class="min-h-screen px-6 md:px-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white relative py-20"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold mb-4">My Projects</h2>
+        <p class="text-gray-300 text-lg">
+          A showcase of my recent work and what I've buit.
+        </p>
+      </div>
+      <div
+        id="projectsContainer" class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto"
+      >
+        <!--Project card-1-->
+        <div
+          class="bg-gray-600 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="assets/TO-DO-LIST.png"
+              alt="Project ss"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-3 text-center text-white">
+              To-Do-List
+            </h3>
+            <p class="text-gray-100 mb-2">
+              <span class="text-blue-600 font-semibold">Description: </span> A
+              clean and user-friendly To-Do List web application designed to
+              help users manage daily tasks efficiently. Built with a focus on
+              simplicity, responsiveness, and interactive UI/UX.
+            </p>
+            <p class="text-gray-100">
+              <span class="text-blue-600 font-semibold">Tech Stack: </span>
+              HTML, CSS, JavaScript.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3 items-center justify-center">
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">HTML</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">CSS</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded"
+                >JavaScript</span
+              >
+            </div>
+            <div class="mt-4 flex justify-center gap-4">
+              <a
+                href="https://mathursuhani.github.io/To-Do-List/"
+                class="text-sm px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/mathursuhani/To-Do-List"
+                class="text-sm px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-800"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          
+        </div>
+        <!--Project card-2-->
+        <div
+          class="bg-gray-600 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="assets/Digital-Clock.png"
+              alt="Project ss"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-3 text-center text-white">
+              Digital Clock
+            </h3>
+            <p class="text-gray-100 mb-2">
+              <span class="text-blue-600 font-semibold">Description: </span> A simple yet elegant Digital Clock web application that displays the current time and date in real-time using JavaScript. Designed to enhance fundamental understanding of DOM manipulation and time-based functions.
+            </p>
+            <p class="text-gray-100">
+              <span class="text-blue-600 font-semibold">Tech Stack: </span>
+              HTML, CSS, JavaScript.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3 items-center justify-center">
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">HTML</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">CSS</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded"
+                >JavaScript</span
+              >
+            </div>
+            <div class="mt-4 flex justify-center gap-4">
+              <a
+                href="https://mathursuhani.github.io/Digital-Clock/"
+                class="text-sm px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/mathursuhani/Digital-Clock"
+                class="text-sm px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-800"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          
+        </div>
+        <!--Project card-3-->
+        <div
+          class="bg-gray-600 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="assets/ITCareersMap.png"
+              alt="Project ss"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-3 text-center text-white">
+              ITCareersMap
+            </h3>
+            <p class="text-gray-100 mb-2">
+              <span class="text-blue-600 font-semibold">Description: </span> A comprehensive career guidance platform designed to help students and aspiring professionals explore various IT career paths with clarity and confidence. The website serves as a one-stop destination for understanding IT roles, required skills, learning resources, and self-assessment tools.
+            </p>
+            <p class="text-gray-100">
+              <span class="text-blue-600 font-semibold">Tech Stack: </span>
+              HTML, Tailwind CSS, JavaScript.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3 items-center justify-center">
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">HTML</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">Tailwind CSS</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded"
+                >JavaScript</span
+              >
+            </div>
+            <div class="mt-4 flex justify-center gap-4">
+              <a
+                href="https://itcareersmap.netlify.app/"
+                class="text-sm px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/mathursuhani/IT-Careers-Map-Project"
+                class="text-sm px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-800"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          
+        </div>
+        
+        <!--Project Card-4-->
+        <div
+          class="bg-gray-600 p-6 hidden rounded-xl shadow-md hover:shadow-2xl transition-all flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="assets/Quiz  App.png"
+              alt="Project ss"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-3 text-center text-white">
+              Quiz App
+            </h3>
+            <p class="text-gray-100 mb-2">
+              <span class="text-blue-600 font-semibold">Description: </span> An interactive web-based quiz application designed to test users' knowledge through multiple-choice questions. The app provides immediate feedback, enhancing the learning experience in an engaging manner.
+            </p>
+            <p class="text-gray-100">
+              <span class="text-blue-600 font-semibold">Tech Stack: </span>
+              HTML, CSS, JavaScript.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3 items-center justify-center">
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">HTML</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">CSS</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded"
+                >JavaScript</span
+              >
+            </div>
+            <div class="mt-4 flex justify-center gap-4">
+              <a
+                href="https://mathursuhani.github.io/Quiz-App/"
+                class="text-sm px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/mathursuhani/Quiz-App"
+                class="text-sm px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-800"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          
+        </div>
+        <!--Project card - 5-->
+        <div
+          class="bg-gray-600 p-6 hidden rounded-xl shadow-md hover:shadow-2xl transition-all flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="assets/Calculator.png"
+              alt="Project ss"
+              class="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 class="text-2xl font-bold mb-3 text-center text-white">
+              Calculator
+            </h3>
+            <p class="text-gray-100 mb-2">
+              <span class="text-blue-600 font-semibold">Description: </span> A responsive and user-friendly calculator web application designed to perform basic arithmetic operations. This project emphasizes clean design and efficient functionality, providing users with a seamless calculation experience.
+            </p>
+            <p class="text-gray-100">
+              <span class="text-blue-600 font-semibold">Tech Stack: </span>
+              HTML, CSS, JavaScript.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3 items-center justify-center">
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">HTML</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded">CSS</span>
+              <span class="bg-gray-900 px-2 py-1 text-sm rounded"
+                >JavaScript</span
+              >
+            </div>
+            <div class="mt-4 flex justify-center gap-4">
+              <a
+                href="https://mathursuhani.github.io/Calculator/"
+                class="text-sm px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/mathursuhani/Calculator"
+                class="text-sm px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-gray-800"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <button id="seeMoreBtn"
+      onclick="toggleProjects()"
+      class="mt-6 px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded transition duration-300 mx-auto block">
+        See More Projects
+      </button>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
