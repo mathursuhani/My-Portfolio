@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
             "Creative Thinker",
             "Tech Enthusiast"
         ],
-        typeSpeed: 40,
-        backSpeed: 20,
+        typeSpeed: 70,
+        backSpeed: 50,
         backDelay: 1500,
         loop: true,
         showCursor: true,
@@ -71,3 +71,32 @@ function toggleProjects(){
     }
     
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+    const form  = document.querySelector("form");
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        const name = form.querySelector('input[type = "text"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const message = form.querySelector('textarea').value.trim();
+
+        if(!name || !email || !message){
+            
+            swal.fire({
+                icon:'error',
+                title:'Oops...',
+                text: ' Please fill in all fields.',
+                confirmButtonColor: '#dc2626',
+            });
+            return;
+        }
+        console.log("Form Submitted:", {name, email, message});
+        swal.fire({
+            icon: 'success',
+            title: 'Message Sent',
+            text: 'Thank you! Your message has been sent successfully.',
+            confirmButtonColor: '#2563eb',
+        });
+        form.reset()
+    });
+});
