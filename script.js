@@ -75,13 +75,13 @@ function toggleProjects(){
 document.addEventListener("DOMContentLoaded", function(){
     const form  = document.querySelector("form");
     form.addEventListener("submit", function(e){
-        e.preventDefault();
+        
         const name = form.querySelector('input[type = "text"]').value.trim();
         const email = form.querySelector('input[type="email"]').value.trim();
         const message = form.querySelector('textarea').value.trim();
 
         if(!name || !email || !message){
-            
+            e.preventDefault();
             swal.fire({
                 icon:'error',
                 title:'Oops...',
@@ -96,7 +96,9 @@ document.addEventListener("DOMContentLoaded", function(){
             title: 'Message Sent',
             text: 'Thank you! Your message has been sent successfully.',
             confirmButtonColor: '#2563eb',
+            showConfirmButton: false,
+            timer: 1500
         });
-        form.reset()
+        
     });
 });
