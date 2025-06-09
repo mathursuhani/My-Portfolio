@@ -72,33 +72,56 @@ function toggleProjects(){
     
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    const form  = document.querySelector("form");
-    form.addEventListener("submit", function(e){
-        
-        const name = form.querySelector('input[type = "text"]').value.trim();
-        const email = form.querySelector('input[type="email"]').value.trim();
-        const message = form.querySelector('textarea').value.trim();
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
 
-        if(!name || !email || !message){
-            e.preventDefault();
-            swal.fire({
-                icon:'error',
-                title:'Oops...',
-                text: ' Please fill in all fields.',
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form action
+
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const message = form.querySelector('textarea[name="message"]').value.trim();
+
+        if (!name || !email || !message) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please fill in all fields.',
                 confirmButtonColor: '#dc2626',
             });
             return;
         }
-        console.log("Form Submitted:", {name, email, message});
-        swal.fire({
-            icon: 'success',
-            title: 'Message Sent',
-            text: 'Thank you! Your message has been sent successfully.',
-            confirmButtonColor: '#2563eb',
-            showConfirmButton: false,
-            timer: 1500
+
+        // Use FormData to send the form
+        const formData = new FormData(form);
+
+        fetch("https://formsubmit.co/mathur.suhani324@gmail.com", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent',
+                    text: 'Thank you! Your message has been sent successfully.',
+                    confirmButtonColor: '#2563eb',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                form.reset();
+            } else {
+                throw new Error("Form submission failed");
+            }
+        })
+        .catch(error => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Submission Failed',
+                text: 'Something went wrong. Please try again later.',
+                confirmButtonColor: '#dc2626',
+            });
+            console.error(error);
         });
-        
     });
 });
